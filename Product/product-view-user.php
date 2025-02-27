@@ -30,7 +30,7 @@ $producten = $product->getAllProducts();
           <li><a href="../Product/">Producten</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
-          <li><a href="">Account</a></li>
+          <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>
       <img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag">
