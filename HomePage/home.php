@@ -38,11 +38,11 @@ $latestProducts = $productClass->getLatestProducts();
           <li><a href="../HomePage/home.php">Home</a></li>
           <li><a href="../Product/product-view-user.php">Producten</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="../Contact/contact.php">Contact</a></li>
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>
-      <img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag">
+       <a href="../Product/addToCart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
     </div>
     
     <div class="row">
@@ -81,7 +81,7 @@ $latestProducts = $productClass->getLatestProducts();
    </div>
 
 
-<!-- Featured Products Dynamisch Laden -->
+<!-- featured products  Laden -->
 <div class="small-container">
   <h2 class="title">Featured Products</h2>
   <div class="row">
@@ -95,7 +95,7 @@ $latestProducts = $productClass->getLatestProducts();
   </div>
 </div>
 
-<!-- Latest Products Dynamisch Laden -->
+<!-- latest oroducts  Laden -->
 <div class="small-container">
   <h2 class="title">Latest Products</h2>
   <div class="row">
@@ -130,12 +130,5 @@ $latestProducts = $productClass->getLatestProducts();
           </div>
 
           
-
-        
-
-            
-           
-
-           
 </body>
 </html>

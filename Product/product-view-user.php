@@ -28,7 +28,7 @@ $producten = $product->getAllProducts();
         <ul>
           <li><a href="../HomePage/home.php">Home</a></li>
           <li><a href="../Product/">Producten</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="../HomePage/about.html">About</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
@@ -43,10 +43,12 @@ $producten = $product->getAllProducts();
   <div class="row">
     <?php foreach ($producten as $product): ?>
       <div class="col-4">
+    <a href="productDetail.php?id=<?= urlencode($product['productID']); ?>">
         <img src="<?= htmlspecialchars($product['foto']); ?>" alt="<?= htmlspecialchars($product['productNaam']); ?>">
-        <h4><?= htmlspecialchars($product['productNaam']); ?></h4>
-        <p>€<?= number_format($product['prijsPerStuk'], 2); ?></p>
-      </div>
+    </a>
+    <h4><?= htmlspecialchars($product['productNaam']); ?></h4>
+    <p>€<?= number_format($product['prijsPerStuk'], 2); ?></p>
+</div>
     <?php endforeach; ?>
   </div>
 </div>
