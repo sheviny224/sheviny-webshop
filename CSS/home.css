@@ -5,6 +5,7 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
+ 
   
 }
 .logo img {
@@ -171,4 +172,13 @@ h4 {
   padding-top: 100px;
   text-align: center;
 }
+
+
+/* footer */
+.footer p {
+  background-color: black;
+  margin: 20px;
+}
  
+
+/* footer */
