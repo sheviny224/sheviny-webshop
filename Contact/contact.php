@@ -31,7 +31,7 @@
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>
-      <img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag">
+      <a href="../cart/cart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
     </div>
 
 <h1 class="contact">Contact Us!</h1>
@@ -57,9 +57,7 @@
 
 </div>
 
-<div class="our-info">
-  <strong><h2>Our Adress</h2></strong>
-</div>
+
 
 </div>
 

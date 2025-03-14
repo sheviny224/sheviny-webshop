@@ -36,12 +36,12 @@ if (!$productDetail) {
         <ul>
           <li><a href="../HomePage/home.php">Home</a></li>
           <li><a href="../Product/product-view-user.php">Producten</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="../HomePage/about.html">About</a></li>
           <li><a href="../Contact/contact.php">Contact</a></li>
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>
-       <a href="../Product/addToCart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
+      <a href="../cart/cart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
     </div>
     
 <div class="small-container">
@@ -53,7 +53,8 @@ if (!$productDetail) {
       <h1><?= htmlspecialchars($productDetail['productNaam']); ?></h1>
       <h4>€<?= number_format($productDetail['prijsPerStuk'], 2); ?></h4>
       <p><?= nl2br(htmlspecialchars($productDetail['omschrijving'])); ?></p>
-      <a href="addToCart.php?id=<?= urlencode($productDetail['productID']); ?>" class="btn">Toevoegen aan winkelwagen</a>
+      <a href="../cart/addToCart.php?id=<?= urlencode($productDetail['productID']); ?>" class="btn">Toevoegen aan winkelwagen</a>
+
     </div>
   </div>
 </div>

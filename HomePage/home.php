@@ -42,7 +42,7 @@ $latestProducts = $productClass->getLatestProducts();
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>
-       <a href="../Product/addToCart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
+       <a href="../cart/cart.php"><img src="../images/shopping-bag.png" width="30px" height="30px" alt="shopping bag"></a>
     </div>
     
     <div class="row">
@@ -87,7 +87,9 @@ $latestProducts = $productClass->getLatestProducts();
   <div class="row">
     <?php foreach ($featuredProducts as $product): ?>
       <div class="col-4">
-        <img src="<?= htmlspecialchars($product['foto']); ?>" alt="<?= htmlspecialchars($product['productNaam']); ?>">
+      <a href="../Product/productDetail.php?id=<?= urlencode($product['productID']); ?>">
+         <img src="<?= htmlspecialchars($product['foto']); ?>" alt="<?= htmlspecialchars($product['productNaam']); ?>">
+         </a>
         <h4><?= htmlspecialchars($product['productNaam']); ?></h4>
         <p>€<?= number_format($product['prijsPerStuk'], 2); ?></p>
       </div>
@@ -126,6 +128,7 @@ $latestProducts = $productClass->getLatestProducts();
             <h1>Alora Sequin Maxi Gown - Black</h1>
             <small>De Alora Sequin Maxi Gown is alleen beschikbaar bij ons!</small>
             <a href=""  class="btn">Buy Now&#8594;</a>
+            
           </div>
 
           </div>
