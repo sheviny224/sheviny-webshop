@@ -27,32 +27,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Formulier</title>
-  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="stylesheet" href="../CSS/login2.css">
   
 </head>
 <body>
 
   
-  <h1>Eenvoudig registreren!</h1>
+  
 
   <div class="form-container">
     <form action="register-user.php" method="post">
 
+    <div class="form-groep">
+    <h1>Eenvoudig registreren!</h1>
       <label for="naam">Naam: </label>
       <input type="text" id="naam" name="naam" placeholder="Voer je naam in" required>
+    </div>
+   
 
-      <label for="woonplaats">Woonplaats: </label>
-      <input type="text" id="woonplaats" name="woonplaats" placeholder="Voer je woonplaats in" required>
+    <div class="form-groep">
+    <label for="woonplaats">Woonplaats: </label>
+    <input type="text" id="woonplaats" name="woonplaats" placeholder="Voer je woonplaats in" required>
+    </div>
 
-      <label for="adres">Adres</label>
-      <input type="text" id="adres" name="adres" placeholder="Voer je adres is" required>
+    <div class="form-groep">
+    <label for="adres">Adres</label>
+    <input type="text" id="adres" name="adres" placeholder="Voer je adres is" required>
+    </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Voer je email in" required>
-      
-      <label for="wachtwoord">Wachtwoord:</label>
-      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Voer je wachtwoord in" required>
-      
+    <div class="form-groep">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Voer je email in" required>
+
+    </div>
+
+    <div class="form-groep">
+    <label for="wachtwoord">Wachtwoord:</label>
+    <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Voer je wachtwoord in" required>
+
+    </div>
+     
       <button type="submit" name="registreer">registreer</button>
       
     </form>

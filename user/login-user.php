@@ -13,7 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($loginCorrect) {
                 header("Location: ../user/dashboard-user.php"); //stuur naar dashboard
-            } else {
+            }
+
+            
+             else {
                 header("Location: ../user/login-user.php"); 
             }
             exit();
@@ -30,25 +33,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Formulier</title>
-  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="stylesheet" href="../CSS/login2.css">
   
 </head>
 <body>
 
   
-  <h1>Eenvoudig inloggen!</h1>
 
-  <div class="form-container">
-    <form action="" method="post">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Voer je email in" required>
-      
-      <label for="wachtwoord">Wachtwoord:</label>
-      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Voer je wachtwoord in" required>
-      
-      <button type="submit" name="inloggen">Inloggen</button>
-      <a href="../user/register-user.php">Nog geen account?</a>
-    </form>
+<div class="form-container">
+    <div class="form-content">
+      <div class="sundown">
+        <img src="../images/sundown.jpg" alt="sundown">
+      </div> 
+
+      <form action="" method="post">
+        <div class="form-groep">
+          <h1>Welkom terug!</h1>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Voer je email in" required>
+        </div>
+
+        <div class="form-groep">
+          <label for="wachtwoord">Wachtwoord:</label>
+          <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Voer je wachtwoord in" required>
+        </div>
+
+        <button type="submit" name="inloggen">Inloggen</button>
+
+        <a href="../user/register-user.php">Nog geen account?</a>
+      </form>
+    </div>
   </div>
 </body>
 </html>
