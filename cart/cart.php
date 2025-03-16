@@ -15,6 +15,7 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winkelwagen</title>
+    <link rel="stylesheet" href="../CSS/cart.css">
     
 </head>
 <body>
@@ -43,8 +44,10 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
         <td>€<?= number_format($item['prijs'], 2); ?></td>
         <td><?= $item['aantal']; ?></td>
         <td>€<?= number_format($totaal, 2); ?></td>
-        <td><a href="../cart/removeFromCart.php?id=<?= $item['productID']; ?>" class="btn">Verwijderen</a>
-        </td>
+        
+
+       
+        <td><a href="../cart/removeFromCart.php?id=<?= $item['productID']; ?>"><img src="../images/bin.png" alt="" srcset="" width="2%" ></a></td>
     </tr>
     <?php endforeach; ?>
     
@@ -55,7 +58,7 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
     </tr>
 </table>
 
-<!-- <a href="../Checkout/checkout.php" class="btn">Afrekenen</a> -->
+<a href="../cart/checkout.php" class="btn">Afrekenen</a>
 
 </body>
 </html>

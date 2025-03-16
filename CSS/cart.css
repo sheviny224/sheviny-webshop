@@ -1,0 +1,72 @@
+/* Algemene body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Tabel styling */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #3498db;
+  color: white;
+}
+
+/* Afbeelding styling */
+td img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Knoppen styling */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c0392b;
+}
+
+/* Afrekenen knop */
+a[href*="checkout"] {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+a[href*="checkout"]:hover {
+  background-color: #343333;
+  color: #fff;
+}
