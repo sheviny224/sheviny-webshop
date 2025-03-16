@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Formulier</title>
-  <link rel="stylesheet" href="../CSS/login2.css">
+  <link rel="stylesheet" href="../CSS/login3.css">
   
 </head>
 <body>
@@ -36,6 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
   <div class="form-container">
+
+  <div class="form-content">
+      <div class="sundown">
+        <img src="../images/sundown.jpg" alt="sundown">
+      </div> 
     <form action="register-user.php" method="post">
 
     <div class="form-groep">
