@@ -49,6 +49,22 @@ class User
         }
     }
 
+    public function medewerkerlogin($email, $wachtwoord)
+    {
+        $medewerkerDB = $this->db->run("SELECT * FROM medewerkers WHERE email = :email", [
+            ':email' => $email])->fetch(); // haal info van de  PDOstatement object
+        
+
+        if ($medewerkerDB && password_verify($wachtwoord, $medewerkerDB['wachtwoord'])) {
+            // Store user data in session  
+            $_SESSION["email"] = $medewerkerDB["email"];
+            return true;
+        } else {
+            return false;
+        }
+    }
+  
+  
     public function logout()
     {
         // log uit

@@ -4,27 +4,38 @@ include_once "../includes/Database.php";
 include_once "../user/User.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  try {
+      $user = new User(); // Creëer User-object
 
-    try {
-        $user = new User(); //Creat User-object
+      if (isset($_POST["inloggen"])) {
+          $role = $_POST["role"]; // Haal de gekozen rol op
 
-        if (isset($_POST["inloggen"])) {
-            $loginCorrect = $user->login($_POST["email"], $_POST["wachtwoord"]);
+          if ($role === "medewerker") {
+              $loginCorrect = $user->medewerkerlogin($_POST["email"], $_POST["wachtwoord"]);
 
-            if ($loginCorrect) {
-                header("Location: ../user/dashboard-user.php"); //stuur naar dashboard
-            }
+              if ($loginCorrect) {
+                  header("Location: ../medewerkers/dashboard-medewerker.php"); // Stuur naar medewerker dashboard
+                  exit();
+              }
+          } else {
+              $loginCorrect = $user->login($_POST["email"], $_POST["wachtwoord"]);
 
-            
-             else {
-                header("Location: ../user/login-user.php"); 
-            }
-            exit();
-        }
-    } catch (Exception $error) {
-        echo "Error login-user:" . $error;
-    }
+              if ($loginCorrect) {
+                  header("Location: ../user/dashboard-user.php"); // Stuur naar gebruiker dashboard
+                  exit();
+              }
+          }
+          
+          // Indien fout, terugsturen naar login
+          header("Location: ../user/login-user.php");
+          exit();
+      }
+  } catch (Exception $error) {
+      echo "Error login-user:" . $error;
+  }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Formulier</title>
-  <link rel="stylesheet" href="../CSS/login2.css">
+  <link rel="stylesheet" href="../CSS/login3.css">
   
 </head>
 <body>
@@ -49,6 +60,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form action="" method="post">
         <div class="form-groep">
           <h1>Welkom terug!</h1>
+
+          <div class="form-groep">
+         <label for="role">Inloggen als:</label>
+         <select id="role" name="role">
+         <option value="user">Gebruiker</option>
+         <option value="medewerker">Medewerker</option>
+          </select>
+           </div>
+
+
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Voer je email in" required>
         </div>
