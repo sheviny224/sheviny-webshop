@@ -44,11 +44,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Nieuw Product Toevoegen</title>
 </head>
+<link rel="stylesheet" href="../CSS/medewerker.css">
 
 <body>
-    <h1>Nieuw Product Toevoegen</h1>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Medewerker</h2>
+    <img src="../images/shevinycv-foto2.jpeg" alt="" srcset="" width="50px" >
+    <ul>
+        <li><a href="../medewerkers/dashboard-medewerker.php">Home</a></li>
+        <li><a href="../Product/insert-product.php">Producten Toevoegen</a></li>
+        <li><a href="../Product/view-product.php">Producten Wijzigen</a></li>
+        <li><a href="#">Orders Bekijken/Wijzigen</a></li>
+    </ul>
+</div>
+
+<div class="content-2">
+
     <!-- enctype is nodig voor uploaden van bestanden/files -->
     <form action="insert-product.php" method="POST" enctype="multipart/form-data">
+    <h1>Nieuw Product Toevoegen</h1>
         <label for="productNaam">Productnaam:</label>
         <input type="text" name="productNaam" required><br>
 
@@ -66,6 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button type="submit">Product Toevoegen</button>
     </form>
+
+</div>
+    
 </body>
 
 </html>
