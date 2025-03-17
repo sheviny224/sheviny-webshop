@@ -4,10 +4,6 @@ $product = new Product();
 $producten = $product->getAllProducts();
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +25,7 @@ $producten = $product->getAllProducts();
           <li><a href="../HomePage/home.php">Home</a></li>
           <li><a href="../Product/">Producten</a></li>
           <li><a href="../HomePage/about.html">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="../Contact/contact.php">Contact</a></li>
           <li><a href="../user/login-user.php">Account</a></li>
         </ul>
       </nav>

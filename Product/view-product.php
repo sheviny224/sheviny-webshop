@@ -129,7 +129,7 @@ $producten = $product->getAllProducts();
         <li><a href="../medewerkers/dashboard-medewerker.php">Home</a></li>
         <li><a href="../Product/insert-product.php">Producten Toevoegen</a></li>
         <li><a href="../Product/view-product.php">Producten Wijzigen</a></li>
-        <li><a href="#">Orders Bekijken/Wijzigen</a></li>
+        <li><a href="../medewerkers/orders_bekijken.php">Orders Bekijken/Wijzigen</a></li>
     </ul>
 </div>
 

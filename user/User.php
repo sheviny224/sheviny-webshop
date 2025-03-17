@@ -34,6 +34,12 @@ class User
         }
     }
 
+    public function getUserByName($naam) {
+        $sql = "SELECT naam FROM users WHERE naam = :naam";
+        $params = [':naam' => $naam];
+        return $this->db->run($sql, $params)->fetch();
+    }
+
     public function login($email, $wachtwoord)
     {
         $userDB = $this->db->run("SELECT * FROM users WHERE email = :email", [
