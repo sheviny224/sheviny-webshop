@@ -141,3 +141,7 @@ button {
 .alle-orders {
   display: block;
 }
+
+.uitloggen {
+  background-color: red;
+}

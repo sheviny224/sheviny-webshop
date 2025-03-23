@@ -61,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Welkom terug, <?php echo htmlspecialchars($user['email']); ?>!</h1>
+    <a href=""></a>
 
     <a href="../HomePage/home.php"><h2>Ben u klaar om (weer)te shoppen klik dan op mij!</h2></a>
     

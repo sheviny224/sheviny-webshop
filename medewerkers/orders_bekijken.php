@@ -104,6 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateStatus'])) {
   margin-left: 250px; /* Zelfde breedte als de sidebar */
   padding: 20px;
 }
+.uitloggen {
+    background-color: red;
+}
     </style>
 </head>
 <body>
@@ -116,6 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateStatus'])) {
         <li><a href="../Product/insert-product.php">Producten Toevoegen</a></li>
         <li><a href="../Product/view-product.php">Producten Wijzigen</a></li>
         <li><a href="../medewerkers/orders_bekijken.php">Orders Bekijken/Wijzigen</a></li>
+        <li ><a class="uitloggen"   href="../user/logout.php">Uitloggen</a></li >
     </ul>
 </div>
 

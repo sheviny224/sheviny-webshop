@@ -117,6 +117,9 @@ $producten = $product->getAllProducts();
  border-radius: 25px;
 }
 
+.uitloggen {
+    background-color: red;
+}
     </style>
 </head>
 
@@ -130,6 +133,7 @@ $producten = $product->getAllProducts();
         <li><a href="../Product/insert-product.php">Producten Toevoegen</a></li>
         <li><a href="../Product/view-product.php">Producten Wijzigen</a></li>
         <li><a href="../medewerkers/orders_bekijken.php">Orders Bekijken/Wijzigen</a></li>
+        <li ><a class="uitloggen"   href="../user/logout.php">Uitloggen</a></li >
     </ul>
 </div>
 

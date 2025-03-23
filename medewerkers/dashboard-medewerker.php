@@ -56,6 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medewerker Gegevens Wijzigen</title>
     <link rel="stylesheet" href="../CSS/medewerker.css">
+
+    <style>
+        .uitloggen {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
 
@@ -68,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <li><a href="../Product/insert-product.php">Producten Toevoegen</a></li>
         <li><a href="../Product/view-product.php">Producten Wijzigen</a></li>
         <li><a href="../medewerkers/orders_bekijken.php">Orders Bekijken/Wijzigen</a></li>
+        <li><a class="uitloggen"  href="../user/logout.php">Uitloggen</a></li>
     </ul>
 </div>
 
