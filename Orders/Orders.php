@@ -41,6 +41,13 @@ class Order {
         return false;
     }
 }
+
+public function getUserOrders($email) {
+    $sql = "SELECT * FROM orders WHERE email = :email"; 
+    $params = [':email' => $email];
+    return $this->db->run($sql, $params)->fetchAll();
+}
+
 }
 
 

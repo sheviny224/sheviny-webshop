@@ -130,7 +130,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateStatus'])) {
         <thead>
             <tr>
                 <th>Order ID</th>
-                <th>User id</th>
+                <th>Email</th>
+                <th>user id</th>
                 <th>Totaalprijs</th>
                 <th>Status</th>
                 <th>Actie</th>
@@ -140,6 +141,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateStatus'])) {
             <?php foreach ($orders as $order): ?>
                 <tr>
                     <td><?= htmlspecialchars($order['order_id']); ?></td>
+                    
+                    <td><?= htmlspecialchars($order['email']); ?></td>
                     <td><?= htmlspecialchars($order['user_id']); ?></td>
                     <td>€<?= number_format($order['totaalprijs'], 2); ?></td>
                     <td>
